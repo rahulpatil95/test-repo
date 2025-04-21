@@ -24,7 +24,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-      - uses: chrnorm/deployment-action@v2
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
@@ -34,3 +33,10 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+       - uses: chrnorm/deployment-action@v2
+              name: Create GitHub deployment
+              id: deployment
+              with:
+                token: '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'
+                environment-url: https://atl-test-rpatil.atlassian.net
+                environment: production
