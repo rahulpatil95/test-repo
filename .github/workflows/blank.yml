@@ -16,8 +16,8 @@ jobs:
         name: Create GitHub deployment
         id: deployment
         with:
-          token: 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
-          environment-url: 'https://atl-test-rpatil.atlassian.net'
+          token: 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
+          environment-url: 'https://api.github.com/'
           environment: production
       - name: Run a one-line script
         run: 'echo Hello, world!'
